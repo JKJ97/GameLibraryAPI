@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #fff;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #00ff88;
+    text-shadow: 0 0 10px rgba(0,255,136,0.3);
+}
+
+h2 {
+    text-align: center;
+    color: #00ff88;
+    margin: 2rem 0 1rem;
+    text-shadow: 0 0 10px rgba(0,255,136,0.3);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.table-container {
+    max-height: 400px; /* Set a proper max height */
+    overflow-y: auto; /* Enables scrolling */
+    overflow-x: hidden; /* Prevents horizontal scroll */
+    border-radius: 10px; /* Keeps rounded edges */
+    position: relative; /* Keeps elements within bounds */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border: none;
+}
+
+th {
+    background: rgba(0, 255, 136, 0.2);
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.form-group {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Remove default number input arrows */
+input[type=number] {
+    -moz-appearance: textfield; /* Firefox */
+    -webkit-appearance: textfield; /* Chrome, Safari, Edge */
+    appearance: textfield;
+}
+
+/* Remove number input arrows in WebKit browsers (Chrome, Safari, Edge) */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+ }
+
+input {
+    width: 200px;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(0,255,136,0.3);
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background: #00ff88;
+    color: #1a1a2e;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #00cc6a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,255,136,0.4);
+}
+
+#errorBox {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background: rgba(255, 0, 0, 0.9);
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 9999;
+    display: none; /* Hidden by default */
+}
+
+/* Custom Scrollbar Styling */
+.table-container::-webkit-scrollbar {
+    width: 8px; /* Scrollbar width */
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1); /* Background color */
+    border-radius: 10px; /* Rounded track */
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #00ff88; /* Bright green scroll */
+    border-radius: 10px; /* Rounded edges */
+    transition: background 0.3s ease-in-out;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background: #00cc6a; /* Darker green on hover */
+}

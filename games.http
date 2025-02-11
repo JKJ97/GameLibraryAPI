@@ -1,0 +1,32 @@
+### Get all games
+GET http://localhost:5000/games
+Accept: application/json
+
+### Get a single game by ID 
+GET http://localhost:5000/games/2
+Accept: application/json
+
+### Create a new game
+POST http://localhost:5000/games
+Content-Type: application/json
+
+{
+  "name": "Marvel Rivals",
+  "genre": "Shooter",
+  "price": 0,
+  "releaseDate": "2024-12-12"
+}
+
+### Update an existing game
+PUT http://localhost:5000/games/6
+Content-Type: application/json
+
+{
+  "name": "Half-Life: Opposing Force",
+  "genre": "Action",
+  "price": 5.99,
+  "releaseDate": "1999-01-01"
+}
+
+### Delete a game
+DELETE http://localhost:5000/games/24

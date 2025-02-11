@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Library</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Game Library</h1>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Genre</th>
+                        <th>Price</th>
+                        <th>Release Year</th>
+                    </tr>
+                </thead>
+                <tbody id="gameList"></tbody>
+            </table>
+        </div>
+        <h2>Add a New Game</h2>
+        <div class="form-group">
+            <input type="text" id="name" placeholder="Name">
+            <input type="text" id="genre" placeholder="Genre">
+            <input type="number" id="price" placeholder="Price">
+            <input type="number" id="releaseDate" placeholder="Release Year">
+            <button onclick="addGame()">Add Game</button>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
